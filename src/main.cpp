@@ -1,12 +1,11 @@
 #include "main.h"
 using namespace vex;
-vex::brain Brain;
+void initialize(void) {}
+void autonomous_control(void) {}
+void user_control(void) {}
 int main()
 {
-
-	Brain.Screen.printAt(10, 50, "Hello V5");
-
-	while (1)
+	while (true)
 	{
 		this_thread::sleep_for(10);
 	}
