@@ -1,28 +1,13 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*    Module:       main.cpp                                                  */
-/*    Author:       Nikhil Gajjar                                             */
-/*    Created:      5/16/2023, 10:08:19 PM                                    */
-/*    Description:  V5 project                                                */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
-#include "vex.h"
-
+#include "main.h"
 using namespace vex;
+vex::brain Brain;
+int main()
+{
 
-// A global instance of vex::brain used for printing to the V5 brain screen
-vex::brain       Brain;
+	Brain.Screen.printAt(10, 50, "Hello V5");
 
-// define your global instances of motors and other devices here
-
-
-int main() {
-
-    Brain.Screen.printAt( 10, 50, "Hello V5" );
-   
-    while(1) {
-        
-        // Allow other tasks to run
-        this_thread::sleep_for(10);
-    }
+	while (1)
+	{
+		this_thread::sleep_for(10);
+	}
 }
