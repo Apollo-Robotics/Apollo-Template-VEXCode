@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _VEX_MAIN_H_
 #define _VEX_MAIN_H_
 #include "api.h"
