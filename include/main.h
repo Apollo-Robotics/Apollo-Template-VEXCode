@@ -2,6 +2,7 @@
 #define _VEX_MAIN_H_
 
 #include "api.h"
+#include "apollo/api.h"
 
 /**
  * You should add more #includes here
