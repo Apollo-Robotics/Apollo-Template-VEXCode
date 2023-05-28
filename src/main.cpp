@@ -1,21 +1,15 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*    Module:       main.cpp                                                  */
-/*    Author:       C:\Users\Nikhil Gajjar                                    */
-/*    Created:      Sun May 28 2023                                           */
-/*    Description:  V5 project                                                */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
-
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// ---- END VEXCODE CONFIGURED DEVICES ----
-
-#include "vex.h"
-
+#include "main.h"
 using namespace vex;
-
+void pre_autonomous(void) {}
+void autonomous(void) {}
+void user_control(void) {
+  while (true) {
+    this_thread::sleep_for(10);
+  }
+}
 int main() {
-  // Initializing Robot Configuration. DO NOT REMOVE!
-  vexcodeInit();
-  
+  pre_autonomous();
+  while (true) {
+    this_thread::sleep_for(100);
+  }
 }
