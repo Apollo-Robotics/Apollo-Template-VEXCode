@@ -28,7 +28,7 @@ prosv5 c fetch Apollo-Template@0.1.0.zip
 prosv5 c apply Apollo-Template
 ```
 
-4. Once the commands have been executed and the program installed, add `#include "apollo/api.hpp"` anywhere in `main.h`
+4. Once the commands have been executed and the program installed, add `#include "apollo/api.h"` anywhere in `main.h`
 5. Once done, intialize the drivetrain in any `.cpp` or `.c` file, such as main.cpp
 
 &emsp;&emsp;To initialize, define a chassis using the `Chassis` class and give it a name, like such:
@@ -39,7 +39,7 @@ Chassis chassis();
 
 &emsp;&emsp;Read the documentation [here](https://github.com/Apollo-Robotics/Apollo-Template-PROS/wiki) to finish initializing or look at the example definition [here](https://github.com/Apollo-Robotics/Apollo-Template-PROS/blob/main/src/main.cpp)!
 
-6. Finally, reference the class in any `.hpp` or `.h` file, such as `main.h`, like such:
+6. Finally, reference the class in any `.h` or `.h` file, such as `main.h`, like such:
 
 ```c++
 extern Chassis chassis();
