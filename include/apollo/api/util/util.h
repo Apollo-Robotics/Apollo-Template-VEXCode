@@ -7,9 +7,4 @@ extern vex::controller master;
 extern vex::competition competition_master;
 namespace apollo::util
 {
-    enum directionType
-    {
-        LEFT = 0,
-        RIGHT = 1
-    };
 } // namespace apollo
