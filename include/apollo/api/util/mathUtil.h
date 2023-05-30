@@ -1,5 +1,6 @@
 #pragma once
 
-namespace apollo {
-    
+namespace apollo::util
+{
+
 }

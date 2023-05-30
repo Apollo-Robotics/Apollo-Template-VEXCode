@@ -5,7 +5,7 @@
 extern vex::brain brain_master;
 extern vex::controller master;
 extern vex::competition competition_master;
-namespace apollo
+namespace apollo::util
 {
     enum directionType
     {
