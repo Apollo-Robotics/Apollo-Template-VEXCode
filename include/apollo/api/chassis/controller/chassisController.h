@@ -15,8 +15,6 @@ namespace apollo
 
     virtual void setMaxSpeed(double targetMaxSpeed) const = 0;
     virtual double getMaxSpeed() const = 0;
-    virtual void setMinSpeed(double targetMinSpeed) const = 0;
-    virtual double getMinSpeed() const = 0;
     virtual void setSpeed(double targetSpeed) const = 0;
     virtual double getSpeed() const = 0;
     /*
