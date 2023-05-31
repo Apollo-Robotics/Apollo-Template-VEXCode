@@ -1,23 +1,33 @@
 #pragma once
+#include "vex_controller.h"
 #include "vex_units.h"
 namespace apollo {
 class chassisModel {
  public:
-  struct joystickDeadzone {
-    double axis1;
-    double axis2;
-    double axis3;
-    double axis4;
-  };
-  joystickDeadzone currentDeadzone;
-  virtual void arcade() = 0;
-  virtual void tank() = 0;
-  virtual void resetSensors() = 0;
+  // TODO: Global Deadzone
+  virtual void setDeadzone(double targetDeadzone) = 0;
+  virtual void setArcade(vex::controller::axis forwardAxis,
+                         vex::controller::axis turnAxis,
+                         vex::controller::axis strafeAxis) = 0;
+  virtual void setTank(vex::controller::axis leftAxis,
+                       vex::controller::axis rightAxis,
+                       vex::controller::axis strafeAxis) = 0;
+  // virtual void setCurvature()=0;
   virtual void setBrakeMode(vex::brakeType brakeMode) = 0;
-  virtual vex::brakeType getBrakeMode() = 0;
-  virtual void setMaxVelocity(double targetMaxVoltage) const = 0;
+  virtual void setMaxVelocity(double targetMaxVoltage) = 0;
+  virtual void setMaxVoltage(double targetMaxVoltage) = 0;
+  virtual void setCartridge(vex::gearSetting cartridge) = 0;
+  virtual vex::brakeType getBrakeMode() const = 0;
+  virtual int getLeftSensorPostion() const = 0;
+  virtual double getLeftMotorVelocity() const = 0;
+  virtual double getLeftMotorCurrent() const = 0;
+  virtual int getRightSensorPostion() const = 0;
+  virtual double getRightMotorVelocity() const = 0;
+  virtual double getRightMotorCurrent() const = 0;
   virtual double getMaxVelocity() const = 0;
-  virtual void setMaxVoltage(double targetMaxVoltage) const = 0;
   virtual double getMaxVoltage() const = 0;
+  virtual bool isLeftMotorOverCurrent() const = 0;
+  virtual bool isRightMotorOverCurrent() const = 0;
+  virtual void resetSensors() = 0;
 };
 }  // namespace apollo
