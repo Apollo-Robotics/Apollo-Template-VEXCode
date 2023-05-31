@@ -98,11 +98,14 @@ tankChassisModel::tankChassisModel(std::vector<int32_t> leftDriveMotorPorts,
 }
 void tankChassisModel::setDeadzone(const double targetDeadzone) {}
 void tankChassisModel::setArcade(const vex::controller::axis forwardAxis,
-                                 const vex::controller::axis turnAxis,
-                                 vex::controller::axis strafeAxis) {}
+                                 const vex::controller::axis turnAxis) {
+  if ((std::abs(forwardAxis.value()) > globalDeadzone) ||
+      (std::abs(turnAxis.value()) > globalDeadzone)) {
+        for(auto i:)
+  }
+}
 void tankChassisModel::setTank(const vex::controller::axis leftAxis,
-                               const vex::controller::axis rightAxis,
-                               vex::controller::axis strafeAxis) {}
+                               const vex::controller::axis rightAxis) {}
 // void tankChassisModel::setCurvature(){}
 void tankChassisModel::setBrakeMode(vex::brakeType brakeMode) {
   currentBrakeMode = brakeMode;

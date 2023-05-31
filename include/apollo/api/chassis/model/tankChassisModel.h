@@ -36,10 +36,8 @@ class tankChassisModel : public chassisModel {
                    int32_t rightRotationTracker, int32_t centerRotationTracker);
   void setDeadzone(double targetDeadzone) override;
   void setArcade(vex::controller::axis forwardAxis,
-                 vex::controller::axis turnAxis,
-                 vex::controller::axis strafeAxis) override;
-  void setTank(vex::controller::axis leftAxis, vex::controller::axis rightAxis,
-               vex::controller::axis strafeAxis) override;
+                 vex::controller::axis turnAxis) override;
+  void setTank(vex::controller::axis leftAxis, vex::controller::axis rightAxis) override;
   // void setCurvature() override;
   void setBrakeMode(vex::brakeType brakeMode) override;
   void setMaxVelocity(double targetMaxVoltage) override;
@@ -58,6 +56,7 @@ class tankChassisModel : public chassisModel {
   bool isRightMotorOverCurrent() const override;
   void resetSensors() override;
   vex::brakeType currentBrakeMode;
+  int globalDeadzone = 5;
 
  protected:
   std::vector<vex::motor> leftDriveMotors;

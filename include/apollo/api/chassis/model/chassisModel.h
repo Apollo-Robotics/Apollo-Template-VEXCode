@@ -7,11 +7,9 @@ class chassisModel {
   // TODO: Global Deadzone
   virtual void setDeadzone(double targetDeadzone) = 0;
   virtual void setArcade(vex::controller::axis forwardAxis,
-                         vex::controller::axis turnAxis,
-                         vex::controller::axis strafeAxis) = 0;
+                         vex::controller::axis turnAxis) = 0;
   virtual void setTank(vex::controller::axis leftAxis,
-                       vex::controller::axis rightAxis,
-                       vex::controller::axis strafeAxis) = 0;
+                       vex::controller::axis rightAxis) = 0;
   // virtual void setCurvature()=0;
   virtual void setBrakeMode(vex::brakeType brakeMode) = 0;
   virtual void setMaxVelocity(double targetMaxVoltage) = 0;
